@@ -1,0 +1,10 @@
+### Vue template
+# gitignore template for Vue.js projects
+#
+# Recommended template: Node.gitignore
+
+docs/.vitepress/cache
+
+node_modules
+
+.idea
