@@ -13,42 +13,31 @@ const coreConceptsSidebar = [
         items: [
             {text: '定义Store', link: '/core-concepts/'},
             {text: 'State', link: '/core-concepts/state'},
-            {text: 'Getter', link: '/core-concepts/start'},
-            {text: 'Action', link: '/core-concepts/start'},
-            {text: '插件', link: '/core-concepts/start'},
-            {text: '组件外的Store', link: '/core-concepts/start'}
-        ]
-    },
-    {
-        text: '核心概念',
-        items: [
-            {text: '定义Store', link: '/core-concepts/what-is-pinia'},
-            {text: 'State', link: '/core-concepts/start'},
-            {text: 'Getter', link: '/core-concepts/start'},
-            {text: 'Action', link: '/core-concepts/start'},
-            {text: '插件', link: '/core-concepts/start'},
-            {text: '组件外的Store', link: '/core-concepts/start'}
+            {text: 'Getter', link: '/core-concepts/getters'},
+            {text: 'Action', link: '/core-concepts/actions'},
+            {text: '插件', link: '/core-concepts/plugins'},
+            {text: '组件外的Store', link: '/core-concepts/outside-component-usage'}
         ]
     },
     {
         text: '服务端渲染(SSR)',
         items: [
-            {text: 'Vue与Vite', link: '/core-concepts/what-is-pinia'},
-            {text: 'Nuxt.js', link: '/core-concepts/start'}
+            {text: 'Vue与Vite', link: '/ssr/'},
+            {text: 'Nuxt.js', link: '/ssr/nuxt'}
         ]
     },
     {
         text: '手册',
         items: [
-            {text: '目录', link: '/core-concepts/what-is-pinia'},
-            {text: '从Vuex <=4 迁移', link: '/core-concepts/start'},
-            {text: '热更新', link: '/core-concepts/start'},
-            {text: '测试', link: '/core-concepts/start'},
-            {text: '不使用setup()的用法', link: '/core-concepts/start'},
-            {text: '组合式Stores', link: '/core-concepts/start'},
-            {text: 'VSCode代码片段', link: '/core-concepts/start'},
-            {text: '从v0/v1迁移至v2', link: '/core-concepts/start'},
-            {text: '处理组合式函数', link: '/core-concepts/start'}
+            {text: '目录', link: '/cookbook/'},
+            {text: '从Vuex <=4 迁移', link: '/cookbook/migration-vuex'},
+            {text: '热更新', link: '/cookbook/hot-module-replacement'},
+            {text: '测试', link: '/cookbook/testing'},
+            {text: '不使用setup()的用法', link: '/cookbook/options-api'},
+            {text: '组合式Stores', link: '/cookbook/composing-stores'},
+            {text: 'VSCode代码片段', link: '/cookbook/vscode-snippets'},
+            {text: '从v0/v1迁移至v2', link: '/cookbook/migration-v1-v2'},
+            {text: '处理组合式函数', link: '/cookbook/composables'}
         ]
     }
 ]
@@ -107,9 +96,9 @@ export default defineConfig({
             {
                 text: '相关链接',
                 items: [
-                    {text: '论坛', link: '/luntan'},
-                    {text: '更新日志', link: '/gengxinrizhi'},
-                    {text: 'Vue.js认证', link: '/vuejsrz'},
+                    {text: '论坛',link: 'https://github.com/vuejs/pinia/discussions',target: '_blank',},
+                    {text: '更新日志', link: 'https://github.com/vuejs/pinia/blob/v2/packages/pinia/CHANGELOG.md',target:'_blank'},
+                    {text: 'Vue.js认证', link: 'https://certificates.dev/vuejs/?friend=VUEROUTER&utm_source=pinia_vuejs&utm_medium=link&utm_campaign=pinia_vuejs_links&utm_content=navbar',target:'_blank'},
                 ]
             },
         ],
@@ -150,6 +139,7 @@ export default defineConfig({
             next: '下一页'
         },
 
+
     },
 
 
@@ -174,8 +164,16 @@ export default defineConfig({
             ]
         }
 
-    }
+    },
 
+    // 主题shiki 配置
+    // https://shiki.tmrs.site/themes
+    markdown: {
+        theme: {
+            light: 'vitesse-light',
+            dark: 'dracula'
+        }
+    }
 
 
 })

@@ -6,7 +6,10 @@ defineOptions({
 
 defineProps({
   href: String,
-  title: String
+  title: {
+    type: String,
+    default: "通过 Pinia 作者的官方视频课程掌握更多内容"
+  }
 })
 
 </script>

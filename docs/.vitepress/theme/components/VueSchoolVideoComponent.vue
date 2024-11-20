@@ -5,8 +5,14 @@ defineOptions({
 })
 
 defineProps({
-  href: String,
-  title: String
+  href: {
+    type: String,
+    default: "https://vueschool.io/lessons/access-pinia-getters-in-the-options-api?friend=vuerouter"
+  },
+  title: {
+    type: String,
+    default: "在 Vue School 上观看免费视频课程"
+  }
 })
 
 </script>
