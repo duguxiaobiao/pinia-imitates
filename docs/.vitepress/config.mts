@@ -106,9 +106,10 @@ export default defineConfig({
         // 侧边栏
         sidebar: {
             // 指南对应的侧边栏
-            '/core-concepts/': coreConceptsSidebar,
             '/introduction': coreConceptsSidebar,
             '/getting-started': coreConceptsSidebar,
+            '/core-concepts/': coreConceptsSidebar,
+            '/ssr/': coreConceptsSidebar,
         },
 
         // 社交链接配置
