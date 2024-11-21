@@ -61,7 +61,7 @@ export default defineConfig({
     lang: 'zh-CN',
     title: "Pinia | The intuitive store for Vue.js",
     description: "风中追风个人网站",
-    head: [['link', {rel: 'icon', href: '/logo.svg'}]],
+    head: [['link', {rel: 'icon', href: '/pinia-imitates/logo.svg'}]],
     appearance: 'dark', // 设置默认为暗色主题
     ignoreDeadLinks: true, // 构建的时候忽略检查死链
     base: '/pinia-imitates/',
