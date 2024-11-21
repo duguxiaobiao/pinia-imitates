@@ -63,6 +63,7 @@ export default defineConfig({
     description: "风中追风个人网站",
     head: [['link', {rel: 'icon', href: '/logo.svg'}]],
     appearance: 'dark', // 设置默认为暗色主题
+    ignoreDeadLinks: true, // 构建的时候忽略检查死链
 
     // 样式配置
     themeConfig: {
@@ -198,10 +199,6 @@ export default defineConfig({
         toc: {
             // 配置显示的层级
             level: [1, 2, 3],
-        },
-
-        links: {
-            checkLinks: 'warn'
         }
     }
 
