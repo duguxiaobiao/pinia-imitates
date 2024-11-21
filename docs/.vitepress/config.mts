@@ -199,6 +199,10 @@ export default defineConfig({
             // 配置显示的层级
             level: [1, 2, 3],
         },
+
+        links: {
+            checkLinks: 'warn'
+        }
     }
 
 
