@@ -64,12 +64,11 @@ export default defineConfig({
     head: [['link', {rel: 'icon', href: '/logo.svg'}]],
     appearance: 'dark', // 设置默认为暗色主题
     ignoreDeadLinks: true, // 构建的时候忽略检查死链
+    base: '/pinia-imitates/',
 
     // 样式配置
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
-
-        base: '/pinia-imitates/',
 
         // logo
         logo: '/logo.svg',
