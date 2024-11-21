@@ -1,5 +1,6 @@
 import {defineConfig} from 'vitepress'
 
+// 指南对应的侧边栏配置
 const coreConceptsSidebar = [
     {
         text: '介绍',
@@ -42,6 +43,17 @@ const coreConceptsSidebar = [
     }
 ]
 
+// API对应的侧边栏配置
+const apiSidebar = [
+    {
+        text: 'packages',
+        items: [
+            {text: 'pinia', link: '/api/modules/pinia'},
+            {text: '@pinia/nuxt', link: '/api/modules/pinia_nuxt'},
+            {text: '@pinia/testing', link: '/api/modules/pinia_testing'},
+        ]
+    }
+]
 
 // @ts-ignore
 export default defineConfig({
@@ -50,6 +62,7 @@ export default defineConfig({
     title: "Pinia | The intuitive store for Vue.js",
     description: "风中追风个人网站",
     head: [['link', {rel: 'icon', href: '/logo.svg'}]],
+    appearance: 'dark', // 设置默认为暗色主题
 
     // 样式配置
     themeConfig: {
@@ -84,15 +97,9 @@ export default defineConfig({
 
         // 导航菜单配置
         nav: [
-            {text: '指南', link: '/core-concepts/'},
-            {
-                text: 'API',
-                link: '/core-concepts'
-            },
-            {
-                text: '手册',
-                link: '/core-concepts2/'
-            },
+            {text: '指南', link: '/core-concepts/',activeMatch: '/core-concepts/'},
+            {text: 'API', link: '/api/',activeMatch: '/api/'},
+            {text: '手册', link: '/cookbook/',activeMatch: '/cookbook/'},
             {
                 text: '相关链接',
                 items: [
@@ -119,6 +126,7 @@ export default defineConfig({
             '/core-concepts/': coreConceptsSidebar,
             '/ssr/': coreConceptsSidebar,
             '/cookbook/': coreConceptsSidebar,
+            '/api/': apiSidebar
         },
 
         // 社交链接配置
